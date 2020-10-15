@@ -2,8 +2,8 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-import pillow
-from pillow import Image
+import Pillow
+from Pillow import Image
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'panoramic_trekking_app.settings')
