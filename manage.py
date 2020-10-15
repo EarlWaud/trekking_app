@@ -4,8 +4,11 @@ import os
 import sys
 import Pillow
 from Pillow import Image
+import request
 
 def main():
+    username = request.form['username']
+    
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'panoramic_trekking_app.settings')
     try:
         from django.core.management import execute_from_command_line
