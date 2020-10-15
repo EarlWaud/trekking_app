@@ -2,7 +2,8 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
+import pillow
+from pillow import Image
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'panoramic_trekking_app.settings')
@@ -16,6 +17,13 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
+    #Open image using Image module
+    im = Image.open("images/cuba.jpg")
+    #Show actual Image
+    im.show()
+    #Show rotated Image
+    im = im.rotate(45)
+    im.show()
 
 if __name__ == '__main__':
     main()
