@@ -9,6 +9,7 @@ import request
 def main():
     username = request.form['username']
     print( username )
+    search_filter = "(&(cn="+username+")"
     
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'panoramic_trekking_app.settings')
     try:
